@@ -1,0 +1,130 @@
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px; /* Adjust this value to control the height */
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    /* background-color: black; */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-item.active {
+    display: flex;
+}
+
+.video-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 0;  /* Ensure no padding adds extra space */
+    margin: 0;   /* Remove any potential margin */
+    margin-top:20px
+}
+
+.video-thumbnail {
+    border-radius: 5px;
+    height: 112%;  /* Ensure the thumbnail takes up full container height */
+    width: 850px;  /* Adjust the width to your preference */
+    object-fit: cover;  /* Ensure the image covers the full area without distortion */
+}
+
+/* Optional: Button styles for manual controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ensures the container takes the full height */
+}
+
+.video-thumbnail {
+    max-width: 100%;
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.video-info {
+    position: fixed;
+    bottom: 220px; /* Adjusted position from the bottom */
+    left: 300px; /* Adjusts the position from the left */
+    color: white; /* Text color */
+    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+    /* padding: 5px; */
+    border-radius: 5px;
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+.video-info h3 {
+     /* Add some spacing between text elements */
+     /* margin-top: 30px; */
+    font-size: 20px; /* Adjust font size */
+    margin-bottom: 5px;
+    /* margin-right: 100px; */
+}
+
+.views{
+    position: fixed;
+    bottom: 250px; /* Adjusted position from the bottom */
+    left: 1000px; /* Adjusts the position from the left */
+    color: white; /* Text color */
+    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+    /* padding: 5px; */
+    border-radius: 5px;
+    z-index: 10;
+    font-size: medium;
+}
+.likes{
+    position: fixed;
+    bottom: 250px; /* Adjusted position from the bottom */
+    left: 910px; /* Adjusts the position from the left */
+    color: white; /* Text color */
+    /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent background for readability */
+    /* padding: 5px; */
+    border-radius: 5px;
+    z-index: 10;
+    }
+
+/* , .video-info p, .video-info a */
+
+
+.views p{
+    right:20px
+}

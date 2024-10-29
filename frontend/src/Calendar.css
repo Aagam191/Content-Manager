@@ -1,0 +1,211 @@
+/* Calendar Styles */
+.calendar {
+  background-color: #1c1c1e; /* Rich black background */
+  padding: 20px;
+  width: 350px;
+  height: 37%;
+  top: 9%;
+  left: 73.5%;
+  position: fixed;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif; /* Modern font */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.month-year {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ffffff; /* White text for month-year */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0px;
+  margin-top: -3.8%;
+  text-align: center;
+  font-weight: bold;
+  color: white; /* Strong red for days */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.col {
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.cell {
+  cursor: pointer;
+  position: relative;
+}
+
+.icon {
+  margin: 0 8px;
+  cursor: pointer;
+  color: #ffffff; /* White icons */
+  transition: color 0.3s;
+}
+
+.cell .number {
+  font-size: 1.2em;
+  color: #ffffff; /* White for day numbers */
+}
+
+.cell .number.gray {
+  color: #666666; /* Darker gray for inactive days */
+}
+
+/* To-Do List Styles */
+.todo-list {
+  background-color: #1c1c1e; /* Rich black background */
+  padding: 0 20px 20px;
+  width: 350px;
+  border-radius: 16px;
+  position: fixed;
+  top: 54%;
+  left: 73.7%;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+.todo-list h3 {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff; /* White heading */
+}
+
+.todo-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-input input {
+  width: 35%;
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255); /* Strong red border */
+  border-radius: 10px;
+  background-color: #333333; /* Darker background for inputs */
+  color: #ffffff; /* White input text */
+}
+
+.todo-input button {
+  padding: 10px;
+  background-color: #ff4976; /* Strong red button */
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.todo-input button:hover {
+  background-color: #e60000; /* Slightly darker hover effect */
+}
+
+.no-tasks {
+  text-align: center;
+  color: #ffffff; /* White message text */
+}
+
+.tasks-container {
+  background-color: #333333; /* Dark background to contrast with black theme */
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.todo-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.todo-items::-webkit-scrollbar {
+  width: 8px;
+}
+
+.todo-items::-webkit-scrollbar-thumb {
+  background-color: #ff4976; /* Strong red scrollbar */
+  border-radius: 4px;
+}
+
+.todo-items::-webkit-scrollbar-track {
+  background-color: #404040; /* Dark track */
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #333333; /* Dark background for tasks */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  align-items: center;
+  border: 1px solid #ff4976; /* Strong red border for tasks */
+  color: #ffffff; /* White task text */
+}
+
+.remove-task {
+  background-color: transparent;
+  border: none;
+  color: #ff4976; /* Strong red for remove button */
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.cell .task-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ff4976; /* Strong red for task indicator */
+  z-index: -1;
+}
+
+.cell .current-date-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(70, 167, 241); /* Slightly darker red for current date */
+  z-index: -1;
+}
+
+.box-container {
+  margin-right: 30px;
+  padding: 20px;
+  width: 100%; /* Set the width of the container */
+}
+
+.box-container > div {
+  flex: 1; /* Each box will take equal space */
+  max-width: 250px; /* Set a maximum width for each box */
+  margin: 0 10px; /* Add space between the boxes */
+}

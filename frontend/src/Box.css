@@ -1,0 +1,36 @@
+.youtube-box {
+    height: 200px;
+    width: 250px;
+    top: 70%;
+    left: 18%; /* Adjusted for equal spacing */
+    position: fixed;
+    background: #c42d26;
+    border-radius: 10px;
+}
+
+.discord-box {
+    height: 200px;
+    width: 250px;
+    top: 70%;
+    left: 37%; /* Equal gap between youtube and discord box */
+    position: fixed;
+    background: #5865f2;
+    border-radius: 10px;
+}
+
+.instagram-box {
+    height: 200px;
+    width: 250px;
+    top: 70%;
+    left: 56%; /* Equal gap between discord and instagram box */
+    position: fixed;
+    background: linear-gradient(45deg, #f9e641, #fa754a, #d62976, #962fbf, rgba(78,47,210,255));
+    border-radius: 10px;
+}
+
+.logo {
+    width: 100%; /* Adjust to fit the box */
+    height: 100%; /* Adjust to fit the box */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    border-radius: 10px; /* Matches the border radius of the box */
+}

@@ -1,0 +1,79 @@
+.comment-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.comment-column {
+    flex: 1; /* Take up equal space */
+    background-color: #222; /* Dark background for contrast */
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #fff; /* Bright text */
+}
+
+.comment-column h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comment-column ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 400px;
+    overflow-y: auto; /* Add scroll if there are many comments */
+}
+
+.comment-column li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333; /* Slightly darker background for each comment */
+    border-radius: 4px;
+    color: #fff; /* Bright text */
+}
+
+.comment-column li:hover {
+    background-color: #444; /* Highlight comment on hover */
+}
+
+.comment-column p {
+    text-align: center;
+    color: #888; /* Brighten dull text */
+}
+
+.input-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-container input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff; /* Bright input text */
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Bright button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-container button:hover {
+    background-color: #45a049;
+}
+
+h3 {
+    color: #fff;
+    text-align: center;
+}

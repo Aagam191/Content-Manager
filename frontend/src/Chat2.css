@@ -1,0 +1,176 @@
+chat2.css
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .chatdiv {
+    background: #121212; /* Rich black background */
+    width: 1200px;
+    max-width: 1300px;
+    border-radius: 20px;
+    box-shadow: 0px 12px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 83vh; /* Limit the height to fit the home screen */
+    margin-top:60px
+  }
+  
+  .chat-form {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0; /* Ensures form won't shrink when history grows */
+  }
+  
+  .chat-personality {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid whitesmoke; /* Subtle red border */
+    background: #1e1e1e; /* Dark grey background */
+    font-size: 16px;
+    color: #e0e0e0; /* Light grey text for better readability */
+    transition: border 0.3s;
+  }
+  
+  .chat-personality:hover {
+    outline: none;
+    border-color: #ff4c4c; /* Slightly brighter red on focus */
+  }
+  
+  .chattextarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid whitesmoke; /* Subtle red border */
+    resize: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+    min-height: 100px;
+    background: #1e1e1e; /* Dark grey background */
+    color: #e0e0e0; /* Light grey text */
+    transition: border 0.3s;
+  }
+  
+  .chattextarea:hover {
+    outline: none;
+    border-color: #ff4c4c; /* Slightly brighter red border when focused */
+  }
+  
+  .chatsubmit {
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff3333; /* Red for the submit button */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .chatsubmit:hover {
+    background-color: #ff4c4c; /* Slightly brighter red on hover */
+    transform: scale(1.01);
+  }
+  
+  .chatsubmit1 {
+    background-color: grey;
+    cursor: not-allowed;
+  }
+  
+  .chatanswerbox {
+    margin-top: 15px;
+    max-height: 30vh; /* Increase answer box height */
+    overflow-y: auto; /* Add scrollbar if answer is too long */
+  }
+  
+  .chatanswer {
+    background: #232323; /* Dark grey background */
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #e0e0e0; /* Light grey text */
+    word-wrap: break-word;
+  }
+  
+  .chat-history {
+    margin-top: 15px;
+    max-height: 50vh; /* Slightly reduce history height to balance */
+    overflow-y: auto; /* Add scroll to chat history */
+    border-top: 1px solid #333; /* Subtle dark grey border */
+    padding-top: 10px;
+  }
+  
+  .chat-history-item {
+    padding: 12px;
+    background: #1e1e1e; /* Dark grey for chat history items */
+    margin-bottom: 0px;
+    border-radius: 8px;
+    color: #e0e0e0; /* Light grey text */
+    width: fit-content;
+  }
+  
+  .chat-history-answer {
+    padding: 12px;
+    background: #1e1e1e; /* Dark grey for chat history items */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #e0e0e0; /* Light grey text */
+    width: 70%;
+    /* max-width: 100%; */
+    margin-left: 30%;
+  }
+
+  .chat-history-item strong {
+    color: #ff3333; /* Red for highlighted text */
+  }
+  
+  .chat-history-item em {
+    display: block;
+    font-size: 12px;
+    color: #999; /* Light grey for timestamps */
+    margin-top: 5px;
+    /* width: 10px; */
+  }
+  .chat-history-answer strong {
+    color: #ff3333; /* Red for highlighted text */
+  }
+  
+  .chat-history-item hr {
+    margin-top: 10px;
+    border: none;
+    border-top: 1px solid #333; /* Dark grey horizontal line */
+  }
+  
+  .chat-bubble {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1e1e1e; /* Dark grey for chat bubbles */
+    color: #e0e0e0; /* Light grey text */
+  }
+  
+  .question .chat-bubble {
+    background-color: #ff3333; /* Red for question chat bubbles */
+    color: white;
+  }
+  
+  /* Scrollbar Styling */
+  .chat-history,
+  .chatanswerbox {
+    scrollbar-width: thin;
+    scrollbar-color: #ff3333 #121212; /* Red scrollbar on rich black background */
+  }
+  
+  .chat-history::-webkit-scrollbar,
+  .chatanswerbox::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .chat-history::-webkit-scrollbar-thumb,
+  .chatanswerbox::-webkit-scrollbar-thumb {
+    background-color: #ff3333; /* Red scrollbar thumb */
+    border-radius: 10px;
+  }

@@ -1,0 +1,103 @@
+
+
+/* Chat Styles */
+html, body {
+    height: 100%; /* Full-page height */
+    margin: 0;
+    overflow: hidden; /* Disable page scroll */
+}
+
+.chatdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d2e33; /* Dark background */
+    padding: 20px;
+    border-radius: 12px;
+    width: 60%;
+    height: 100%; /* Use 100% of the viewport height */
+    margin: 0 auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Heavier shadow for depth */
+    overflow: hidden; /* Prevent internal scrolling */
+}
+
+.chat-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    flex-shrink: 0; /* Prevent form from shrinking */
+}
+
+.chat-personality {
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #444;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.chattextarea {
+    padding: 15px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #444;
+    color: #ffffff;
+    resize: none;
+    height: 120px;
+}
+
+.chatsubmit {
+    padding: 10px;
+    background-color: #ff4976;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chatsubmit:hover {
+    background-color: #ff709b;
+}
+
+.chatsubmit:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+.chatanswerbox {
+    background-color: #3a3b40;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+
+    /* Set maximum height and allow scrolling */
+    flex-grow: 1; /* Allow the chat box to grow */
+    max-height: calc(100vh - 480px); /* Adjust based on other content */
+    overflow-y: auto; /* Enable vertical scroll */
+    scrollbar-width: thin; /* For Firefox */
+}
+
+.chatanswer {
+    font-size: 1.1em;
+    color: #ffffff;
+    white-space: pre-wrap;
+}
+
+/* Webkit-based browsers */
+.chatanswerbox::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.chatanswerbox::-webkit-scrollbar-thumb {
+    background-color: #555; /* Scrollbar color */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.chatanswerbox::-webkit-scrollbar-track {
+    background: #3a3b40; /* Scrollbar track color */
+}

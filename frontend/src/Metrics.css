@@ -1,0 +1,153 @@
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  background-color: #1e1e1e;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 20px;
+  overflow-y: auto; /* Allow sidebar scrolling if necessary */
+}
+
+.sidebar-item {
+  padding: 10px 20px;
+  color: #a0a0a0;
+}
+
+.sidebar-item.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* overflow-y: auto; Allow main content scrolling */
+}
+
+.metrics-container {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  flex-grow: 1;
+  width: 1200px;
+  min-width: 0; /* Prevent overflow */
+  /* overflow-y: auto; */
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: #252525;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #000000;
+  font-weight: normal;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card:nth-child(1) { background-color: #3dd5f3; }
+.card:nth-child(2) { background-color: #8e5aff; }
+.card:nth-child(3) { background-color: #5294e7; }
+.card:nth-child(4) { background-color: #ff7b5a; }
+
+.graph-section {
+  background-color: #252525;
+  border-radius: 10px;
+  padding: 20px;
+  flex-grow: 1;
+  margin-bottom: 30px;
+}
+
+.graph-section h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #a0a0a0;
+}
+
+.graph-container {
+  width: 1130px;
+  height: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #252525;
+  border-radius: 10px;
+}
+
+.graph-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.table-section {
+  background-color: #252525;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  max-height: 300px; /* Set a max height for the table container */
+  overflow-y: auto; /* Allow the table to scroll vertically */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: #a0a0a0;
+  font-weight: normal;
+}
